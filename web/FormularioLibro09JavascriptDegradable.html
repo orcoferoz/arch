@@ -4,26 +4,12 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
-    <script type="text/javascript">
-            function validacion() {
-                var isbn=document.getElementById("isbn");
-                var miniformulario=document.getElementById("miformulario");
-                if(isbn.value=="") {
-                    alert("datos no válidos")
-                    return false;
-                }
-                else {
-                  miformulario.submit();
-                }
-            }
-    </script>
-    <title>Ejemplo01</title>
-    <style type="text/css">
-            font-weigth:bold;
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/formato.css"/>
+    <script type="text/javascript" src="js/validacion.js"></script>
+    <title>Resultado Final</title>
 </head>
 <body>
-    <form action="insertarLibro.jsp" id="miformulario">
+    <form action="destino.html" onsubmit="return validacion();">
         <fieldset>
         <legend>Formulario alta libro</legend>
         <p><label for="isbn">ISBN:</label>
@@ -38,7 +24,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
             <input id="categoria" type="text" name="categoria"/>
         </p>
         <p>
-            <input type="button" value="Insertar" onclick="validacion()"/>
+            <input type="submit" value="Insertar" />
         </p>
         </fieldset>
     </form>
